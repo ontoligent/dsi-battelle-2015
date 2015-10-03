@@ -1,0 +1,9 @@
+#Exclude all data files
+
+*.csv
+*.xls
+*.xlsx
+
+#exclude all temp files
+
+*.*~
