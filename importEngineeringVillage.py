@@ -14,8 +14,9 @@ files = os.listdir(path)
 
 dat = pd.DataFrame()
 for file in files:
+    print("Processing " + str(file))
     frame = pd.read_excel(os.path.join(path,file))
     frame.columns = frame.columns.str.lower()
     frame.columns = frame.columns.str.replace("[^A-Za-z0-9]","_")
     dat = dat.append(frame, ignore_index = True)
-dat.to_csv('EngineeringVillage.csv', index_label = False)
+dat.to_csv('EngineeringVillage.csv')
